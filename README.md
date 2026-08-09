@@ -2,6 +2,11 @@
 
 This repo contains the starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
 
+## CI Tests and Build Status
+![Build Status](https://github.com/aaronlankinen/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
+
+![Coverage Status](https://codecov.io/gh/aaronlankinen/learn-cicd-starter/branch/main/badge.svg?token=K85C9E3T1B)
+
 ## Local Development
 
 Make sure you're on Go version 1.22+.
