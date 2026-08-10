@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// respondWithError sends a JSON formatted error response with the provided status code.
 func respondWithError(w http.ResponseWriter, code int, msg string, logErr error) {
 	if logErr != nil {
 		log.Println(logErr)
@@ -21,6 +22,7 @@ func respondWithError(w http.ResponseWriter, code int, msg string, logErr error)
 	})
 }
 
+// respondWithJSON sends a JSON response with the provided status code and payload.
 func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.Header().Set("Content-Type", "application/json")
 	dat, err := json.Marshal(payload)
@@ -30,5 +32,7 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 		return
 	}
 	w.WriteHeader(code)
-	w.Write(dat)
+	if _, err := w.Write(dat); err != nil {
+		log.Printf("Failed to write response: %v", err)
+	}
 }
