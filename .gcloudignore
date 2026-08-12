@@ -1,1 +1,8 @@
-!notely
+.gcloudignore
+.git
+.gitignore
+google-cloud-sdk/
+.env
+notely
+out/
+
