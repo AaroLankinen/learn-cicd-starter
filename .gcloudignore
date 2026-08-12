@@ -3,6 +3,4 @@
 .gitignore
 google-cloud-sdk/
 .env
-notely
-out/
-
+!notely

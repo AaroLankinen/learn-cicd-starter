@@ -1,5 +1,4 @@
 out
 .env
 google-cloud-sdk
-.gcloudignore
-
+notely
